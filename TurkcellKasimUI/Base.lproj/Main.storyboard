@@ -57,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-168" y="167"/>
+            <point key="canvasLocation" x="-210" y="174"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="m70-4R-p07">
@@ -67,21 +67,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHQ-6f-XwM">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="kHQ-6f-XwM" secondAttribute="height" multiplier="2:1" id="L26-NA-zOh"/>
-                                </constraints>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="UOJ-zT-SHW">
-                                <rect key="frame" x="20" y="348" width="374" height="228"/>
+                                <rect key="frame" x="20" y="127" width="374" height="670.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MUF-uz-aET">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="71"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="241.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="RLF-pG-DHf">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="29"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="31.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="A">
                                                         <attributes>
@@ -106,15 +99,50 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adınızı Girin" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xM9-Cl-OVB">
-                                                <rect key="frame" x="0.0" y="37" width="374" height="34"/>
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adınızı Girin" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="xM9-Cl-OVB">
+                                                <rect key="frame" x="0.0" y="39.5" width="374" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="emailAddress" returnKeyType="google" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="emailAddress" returnKeyType="search" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="crW-mx-zas" id="Lfr-Lo-WIf"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adınızı Girin" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="8bv-zT-L4V">
+                                                <rect key="frame" x="0.0" y="81.5" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="emailAddress" returnKeyType="search" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="crW-mx-zas" id="6Ad-xw-eiP"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adınızı Girin" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jlX-aE-GkC">
+                                                <rect key="frame" x="0.0" y="123.5" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="emailAddress" returnKeyType="search" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="crW-mx-zas" id="pHP-0Z-aZC"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adınızı Girin" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KlE-i2-g0h">
+                                                <rect key="frame" x="0.0" y="165.5" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="emailAddress" returnKeyType="search" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="crW-mx-zas" id="Vx3-HR-8bH"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adınızı Girin" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="B2l-Qm-nW5">
+                                                <rect key="frame" x="0.0" y="207.5" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="emailAddress" returnKeyType="search" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="crW-mx-zas" id="k1d-yW-YRu"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uxW-tU-zvK">
-                                        <rect key="frame" x="0.0" y="101" width="374" height="62.5"/>
+                                        <rect key="frame" x="0.0" y="271.5" width="374" height="188.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soyadınızı Giriniz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25f-oa-S8q">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -122,20 +150,72 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YQd-Po-qyl">
+                                            <textField opaque="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="YQd-Po-qyl">
+                                                <rect key="frame" x="0.0" y="28.5" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="crW-mx-zas" id="DjZ-R7-0yp"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="iEO-1b-F2M">
+                                                <rect key="frame" x="0.0" y="70.5" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="crW-mx-zas" id="VRx-wu-uF4"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="NiD-kh-H7h">
+                                                <rect key="frame" x="0.0" y="112.5" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="crW-mx-zas" id="5sK-Jj-rXi"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="9" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="J0q-o1-MMi">
+                                                <rect key="frame" x="0.0" y="154.5" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="crW-mx-zas" id="E00-R1-OqM"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dyr-zv-YEK">
+                                        <rect key="frame" x="0.0" y="490" width="374" height="62.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şehir Seç" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhU-WM-KAg">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CkA-FX-z3L">
                                                 <rect key="frame" x="0.0" y="28.5" width="374" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZN-Md-7LD">
-                                        <rect key="frame" x="0.0" y="193.5" width="374" height="34.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZN-Md-7LD">
+                                        <rect key="frame" x="0.0" y="582.5" width="374" height="34"/>
                                         <color key="tintColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Kaydet"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Kaydet"/>
                                         <connections>
                                             <action selector="saveTapped:" destination="crW-mx-zas" eventType="touchUpInside" id="Cjr-DS-6Sp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6j-II-q5U">
+                                        <rect key="frame" x="0.0" y="646.5" width="374" height="24"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="radio_unchecked24"/>
+                                        <state key="selected" image="radio_checked24"/>
+                                        <connections>
+                                            <action selector="saveTapped:" destination="crW-mx-zas" eventType="touchUpInside" id="9eO-9N-Uyc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -144,16 +224,14 @@
                         <viewLayoutGuide key="safeArea" id="DRx-ej-byK"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="kHQ-6f-XwM" firstAttribute="leading" secondItem="DRx-ej-byK" secondAttribute="leading" id="2fm-8A-F1y"/>
                             <constraint firstItem="DRx-ej-byK" firstAttribute="trailing" secondItem="UOJ-zT-SHW" secondAttribute="trailing" constant="20" id="61L-0M-Plj"/>
-                            <constraint firstItem="kHQ-6f-XwM" firstAttribute="top" secondItem="o6C-IV-scO" secondAttribute="top" id="QNT-ue-mD2"/>
-                            <constraint firstItem="DRx-ej-byK" firstAttribute="trailing" secondItem="kHQ-6f-XwM" secondAttribute="trailing" id="qjN-D5-ujh"/>
                             <constraint firstItem="UOJ-zT-SHW" firstAttribute="centerY" secondItem="DRx-ej-byK" secondAttribute="centerY" id="xxh-2Z-Mvb"/>
                             <constraint firstItem="UOJ-zT-SHW" firstAttribute="leading" secondItem="DRx-ej-byK" secondAttribute="leading" constant="20" id="yRQ-ra-9CO"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnSave" destination="lZN-Md-7LD" id="hv4-CK-u1U"/>
+                        <outlet property="btnSave" destination="I6j-II-q5U" id="FtI-dP-4Mx"/>
+                        <outlet property="countryTextField" destination="CkA-FX-z3L" id="cVB-lJ-nDg"/>
                         <outlet property="txtLastName" destination="YQd-Po-qyl" id="LCB-Ik-vEd"/>
                         <outlet property="txtName" destination="xM9-Cl-OVB" id="o1Y-YU-Keb"/>
                     </connections>
@@ -164,11 +242,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="radio_checked24" width="24" height="24"/>
+        <image name="radio_unchecked24" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.0" green="0.76470588235294112" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
